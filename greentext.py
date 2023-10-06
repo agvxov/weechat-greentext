@@ -30,7 +30,9 @@ def hi_greentext(modifier, s):
 	if greentext_re.search(s):
 		if modifier == 'irc_out1_PRIVMSG':
 			s = COLOR_GREEN + s
-		return weechat.color("green") + s
+		else:
+			s = weechat.color("green") + s
+		return s
 	else:
 		return s
 
@@ -38,7 +40,9 @@ def hi_purpletext(modifier, s):
 	if purpletext_re.search(s):
 		if modifier == 'irc_out1_PRIVMSG':
 			s = COLOR_PURPLE + s
-		return weechat.color("purple") + s
+		else:
+			weechat.color("purple") + s
+		return s
 	else:
 		return s
 
@@ -47,7 +51,9 @@ def hi_redtext(modifier, s):
 		if modifier == 'irc_out1_PRIVMSG':
 			m = redtext_re.search(s)
 			s = s[:m.start(1)] + COLOR_RED + m.group(1) + COLOR_END + s[m.end(1):]
-		return weechat.color("red") + s
+		else:
+			weechat.color("red") + s
+		return s
 	else:
 		return s
 
