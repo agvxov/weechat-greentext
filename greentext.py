@@ -32,9 +32,7 @@ def hi_greentext(modifier, s):
 			s = COLOR_GREEN + s
 		else:
 			s = weechat.color("green") + s
-		return s
-	else:
-		return s
+	return s
 
 def hi_purpletext(modifier, s):
 	if purpletext_re.search(s):
@@ -42,9 +40,7 @@ def hi_purpletext(modifier, s):
 			s = COLOR_PURPLE + s
 		else:
 			weechat.color("purple") + s
-		return s
-	else:
-		return s
+	return s
 
 def hi_redtext(modifier, s):
 	if redtext_re.search(s):
@@ -53,9 +49,7 @@ def hi_redtext(modifier, s):
 			s = s[:m.start(1)] + COLOR_RED + m.group(1) + COLOR_END + s[m.end(1):]
 		else:
 			weechat.color("red") + s
-		return s
-	else:
-		return s
+	return s
 
 def hi(data, modifier, modifier_data, s):
 	msg = weechat.info_get_hashtable('irc_message_parse', {'message': s})
