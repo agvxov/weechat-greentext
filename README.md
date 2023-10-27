@@ -1,5 +1,5 @@
 # Weechat-Greentext
-Weechat script for applying imageboard formatting to messages. The follwing are supported:
+Weechat script for applying imageboard formatting to messages. The following are supported:
  + greentext
  + purpletext
  + redtext
