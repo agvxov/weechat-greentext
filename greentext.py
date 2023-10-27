@@ -1,4 +1,12 @@
 # # Weechat-Greentext
+# Version:          v1
+# Min WeeChat
+#  version tested:  3.8
+# Author:           AGVXOV
+# Contact:          agvxov@gmail.com
+# Project Home:     https://github.com/agvxov/weechat-greentext
+# This script is Public Domain.
+#
 # Weechat script for applying imageboard formatting to messages. The follwing are supported:
 #  + greentext
 #  + purpletext
@@ -6,16 +14,16 @@
 # 
 # Both inbound and outbound messages are colored.
 # Since the coloring uses IRC color codes,
-# it will be visible to both you and your friends.
+# outbound greentexting will be visible to both you and your friends.
 #
 import weechat
 import re
 
 SCRIPT_NAME    = "greentext"
-SCRIPT_AUTHOR  = "Anon"
+SCRIPT_AUTHOR  = "AGVXOV"
 SCRIPT_VERSION = "1"
 SCRIPT_LICENSE = "PD"
-SCRIPT_DESC    = "Colorize imageboard tpye formatting."
+SCRIPT_DESC    = "Colorize imageboard-style text formatting."
 
 greentext_re  = re.compile("^\s*>.*$")
 purpletext_re = re.compile("^\s*<.*$")
